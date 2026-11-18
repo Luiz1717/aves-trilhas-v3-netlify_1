@@ -1,4 +1,11 @@
 /* ════════════════════════════════════════
+   UTILITÁRIOS DE DISPOSITIVO
+════════════════════════════════════════ */
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+/* ════════════════════════════════════════
    NAVEGAÇÃO
 ════════════════════════════════════════ */
 function showView(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('on'));document.getElementById(id).classList.add('on');}
