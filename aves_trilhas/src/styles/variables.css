@@ -1,0 +1,133 @@
+/* ── DESIGN TOKENS ── */
+:root{
+  --vm:#1E3320;--vf:#2E5C30;--vc:#5A9048;--vb:#82C060;
+  --cr:#F2EDE0;--ar:#E0D4B8;--te:#7A4E28;--do:#B8902E;
+  --tx:#18281A;--br:#FAFAF4;--err:#B03020;--ok:#228844;
+}
+
+/* ── RESET ── */
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{scroll-behavior:smooth}
+body{font-family:'DM Sans',sans-serif;background:var(--cr);color:var(--tx);max-width:430px;margin:0 auto;overflow-x:hidden}
+img{display:block}
+.view{display:none!important}.view.on{display:block!important}
+
+/* ── HERO ── */
+.hero{min-height:100svh;background:var(--vm);position:relative;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:60px;overflow:hidden}
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-bg img{width:100%;height:100%;object-fit:cover;opacity:.28;object-position:center 35%}
+.hero-ov{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(30,51,32,.2),rgba(30,51,32,.96))}
+.hero-sil{position:absolute;bottom:0;left:0;width:100%;pointer-events:none}
+.hero-c{position:relative;z-index:2;padding:0 28px}
+.valora-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(184,144,46,.18);border:1px solid rgba(184,144,46,.4);border-radius:50px;padding:5px 14px;font-size:10px;font-weight:600;letter-spacing:2.5px;text-transform:uppercase;color:var(--do);margin-bottom:16px}
+.hero-title{font-family:'Lora',serif;font-size:52px;line-height:1;color:var(--cr);margin-bottom:8px}
+.hero-title em{font-style:italic;color:var(--vb)}
+.hero-sub{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(242,237,224,.4);margin-bottom:20px}
+.hero-lead{font-size:14px;line-height:1.72;color:rgba(242,237,224,.72);margin-bottom:32px;max-width:300px}
+.hero-btns{display:flex;gap:12px;align-items:center}
+.scue{position:absolute;bottom:14px;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:3px;opacity:.3;animation:bob 2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(7px)}}
+.scue span{font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--cr)}
+
+/* ── TOPNAV ── */
+.tnav{position:sticky;top:0;z-index:80;background:rgba(242,237,224,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(46,92,48,.14);display:flex;align-items:center;justify-content:space-between;padding:12px 22px}
+.brand{font-family:'Lora',serif;font-size:18px;color:var(--vm);display:flex;align-items:center;gap:8px}
+
+/* ── SECTIONS ── */
+.sec{padding:54px 22px}
+.sec-lbl{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--vf);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.sec-lbl::before{content:'';width:22px;height:1px;background:var(--vf);flex-shrink:0}
+.sec-title{font-family:'Lora',serif;font-size:30px;line-height:1.2;color:var(--vm);margin-bottom:16px}
+.sec-title em{font-style:italic;color:var(--vf)}
+
+/* ── AVES GRID ── */
+.aves-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:20px}
+.ave-card{background:var(--br);border-radius:18px;overflow:hidden;box-shadow:0 4px 18px rgba(24,40,26,.12);cursor:pointer;transition:transform .18s,box-shadow .18s}
+.ave-card:active{transform:scale(.97);box-shadow:0 2px 8px rgba(24,40,26,.1)}
+.ave-img-w{width:100%;height:155px;overflow:hidden;background:var(--vm);position:relative}
+.ave-img-w img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.ave-card:hover .ave-img-w img{transform:scale(1.06)}
+.ave-st{position:absolute;top:8px;right:8px;padding:3px 9px;border-radius:10px;font-size:9px;letter-spacing:.8px;font-weight:700;text-transform:uppercase;backdrop-filter:blur(6px)}
+.s-lc{background:rgba(34,136,68,.82);color:#d0ffd8}
+.s-vu{background:rgba(184,144,46,.85);color:#fff8d0}
+.ave-info{padding:12px 13px 14px}
+.ave-name{font-family:'Lora',serif;font-size:13.5px;color:var(--vm);line-height:1.2;margin-bottom:2px}
+.ave-sci{font-size:10px;font-style:italic;color:rgba(24,40,26,.4);margin-bottom:4px}
+.ave-bio{font-size:10.5px;color:var(--vf);font-weight:500}
+
+/* ── BOTÃO VIBRAÇÃO NO CARD ── */
+.btn-vibrar-card{
+  margin:8px 13px 12px;
+  width:calc(100% - 26px);
+  padding:9px;
+  border-radius:50px;
+  border:none;
+  background:var(--vm);
+  color:var(--cr);
+  font-family:'DM Sans',sans-serif;
+  font-size:12px;
+  font-weight:600;
+  cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:7px;
+  transition:.2s;
+}
+.btn-vibrar-card:active{transform:scale(.97)}
+.btn-vibrar-card.vibrando{background:var(--vc);animation:pulse-btn .4s ease infinite alternate}
+@keyframes pulse-btn{from{transform:scale(1)}to{transform:scale(1.03)}}
+
+/* ── BARRAS HÁPTICAS ── */
+.haptic-bars{display:flex;align-items:flex-end;gap:3px;height:36px;overflow:hidden}
+.hbar{border-radius:3px 3px 2px 2px;transition:background .3s,transform .15s;flex-shrink:0}
+.hbar.ativo{transform:scaleY(1.3)}
+
+/* ── MODAL ── */
+.overlay{position:fixed;inset:0;z-index:300;background:rgba(18,30,20,.88);display:none;align-items:flex-end;justify-content:center;backdrop-filter:blur(6px)}
+.overlay.on{display:flex}
+.mbox{background:var(--br);border-radius:28px 28px 0 0;width:100%;max-width:430px;max-height:93svh;overflow-y:auto;animation:slideup .3s ease}
+@keyframes slideup{from{transform:translateY(48px);opacity:0}to{transform:translateY(0);opacity:1}}
+.m-photo{width:100%;height:270px;overflow:hidden;background:var(--vm);position:relative}
+.m-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.m-credit{position:absolute;bottom:8px;left:10px;font-size:9px;color:rgba(255,255,255,.55);background:rgba(0,0,0,.35);padding:2px 8px;border-radius:8px}
+.m-x{position:absolute;top:14px;right:14px;width:36px;height:36px;background:rgba(18,30,20,.55);border:none;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;z-index:5}
+.m-x svg{width:16px;height:16px;color:#fff;display:block}
+.m-body{padding:20px 22px 44px}
+.m-name{font-family:'Lora',serif;font-size:24px;color:var(--vm);margin-bottom:3px}
+.m-sci{font-size:12px;font-style:italic;color:rgba(24,40,26,.4);margin-bottom:6px}
+.m-nomes{font-size:11px;color:rgba(24,40,26,.42);font-style:italic;margin-bottom:12px}
+.m-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:50px;font-size:11px;font-weight:600;margin-bottom:14px}
+.m-perigo{background:rgba(176,48,32,.1);border:1px solid rgba(176,48,32,.2);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:12.5px;line-height:1.6;color:#7a2010}
+.m-facts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:14px}
+.mf{background:var(--ar);border-radius:12px;padding:10px 12px}
+.mf-l{font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(24,40,26,.42);margin-bottom:2px}
+.mf-v{font-size:13px;font-weight:600;color:var(--vm)}
+.m-desc{font-size:13.5px;line-height:1.74;color:#354035}
+
+/* ── BLOCO HÁPTICO NO MODAL ── */
+.haptic-block{
+  background:rgba(90,144,72,.08);
+  border:1.5px solid rgba(90,144,72,.3);
+  border-radius:16px;
+  padding:14px 15px;
+  margin:0 0 14px;
+}
+.haptic-block-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}
+.haptic-lbl{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--vf)}
+.haptic-toggle{border:none;border-radius:20px;padding:4px 11px;font-family:'DM Sans',sans-serif;font-size:10px;font-weight:700;cursor:pointer;transition:.2s}
+.haptic-toggle.on{background:rgba(90,144,72,.25);color:#3B6D11}
+.haptic-toggle.off{background:rgba(24,40,26,.1);color:rgba(24,40,26,.4)}
+.haptic-desc{font-size:11px;color:rgba(24,40,26,.5);font-style:italic;margin:8px 0 12px}
+.btn-sentir{
+  width:100%;padding:13px;border-radius:50px;border:none;
+  font-family:'DM Sans',sans-serif;font-size:14px;font-weight:700;
+  background:var(--vm);color:var(--cr);cursor:pointer;
+  display:flex;align-items:center;justify-content:center;gap:9px;
+  transition:.2s;
+}
+.btn-sentir:active{transform:scale(.97)}
+.btn-sentir:disabled{background:rgba(24,40,26,.08);color:rgba(24,40,26,.3);cursor:not-allowed}
+.btn-sentir.pulsando{background:var(--vc)}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:90px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--vm);color:var(--cr);padding:11px 22px;border-radius:50px;font-size:13px;font-weight:500;z-index:500;opacity:0;transition:all .3s;pointer-events:none;white-space:nowrap;box-shadow:0 4px 20px rgba(0,0,0,.25)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+

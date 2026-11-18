@@ -1,0 +1,40 @@
+const TRILHAS = [
+  {id:'cachoeira',n:'Cachoeira das Antas',lv:'lv-f',lvn:'Fácil',km:'3,2',t:'1h30',sp:15,
+   foto:AVES[0].img,cap:'Mata ciliar e córrego — Arara-azul',
+   desc:'Trilha às margens de um córrego pela mata ciliar. Ideal para iniciantes e famílias. Grande diversidade de aves aquáticas.',
+   fatos:['🌊 Córrego permanente','🌡️ Sombra total','🐸 Anfíbios: 8 sp.','📸 5 pontos de foto'],
+   aves:[0,2,3,14,17],
+   quiz:[
+     {q:'Principal ameaça à Arara-azul?',img:AVES[0].img,cap:'Arara-azul (VU)',ops:['Excesso de chuvas','Tráfico ilegal e perda de palmeirais','Temperatura elevada','Predadores'],c:1,exp:'A arara-azul sofre com tráfico ilegal e destruição dos palmeirais de acuri e bocaiúva.'},
+     {q:'O beija-flor bate as asas quantas vezes por segundo?',img:AVES[2].img,cap:'Beija-flor-tesoura',ops:['5 a 10','15 a 20','Até 40','Mais de 100'],c:2,exp:'Até 40 vezes por segundo — o zumbido característico que dá nome à ave.'},
+     {q:'Qual é a ave nacional do Brasil?',img:AVES[8].img,cap:'Sabiá-laranjeira',ops:['Arara-azul','Tucano-toco','Sabiá-laranjeira','Garça-branca'],c:2,exp:'O sabiá-laranjeira é a ave nacional do Brasil, eternizado na Canção do Exílio de Gonçalves Dias.'},
+     {q:'Status IUCN da Arara-azul?',img:AVES[0].img,cap:'Status IUCN',ops:['LC','NT','VU','CR'],c:2,exp:'Vulnerável (VU) — população cresceu de ~2.500 para +6.500 indivíduos graças ao Instituto Arara Azul.'},
+     {q:'Qual ave realiza danças coletivas em "lek"?',img:AVES[18].img,cap:'Tangará-dançarino',ops:['Arara-azul','Beija-flor','Pomba-galega','Tangará-dançarino'],c:3,exp:'Machos do tangará dançam colaborativamente em "lek" para atrair fêmeas — coreografia sincronizada única!'},
+   ]},
+  {id:'pico',n:'Pico da Onça Pintada',lv:'lv-m',lvn:'Médio',km:'7,8',t:'4h',sp:28,
+   foto:AVES[4].img,cap:'Vista panorâmica — área de raptores',
+   desc:'Trilha de altitude com vistas panorâmicas. Excelente para observar gaviões, harpia e aves de rapina.',
+   fatos:['⛰️ Altitude: 1.240 m','🌧️ Levar capa de chuva','🦅 Raptores: 7 sp.','🧭 GPS recomendado'],
+   aves:[4,9,10,12],
+   quiz:[
+     {q:'O Gavião-real é a maior águia de qual continente?',img:AVES[4].img,cap:'Gavião-real (VU)',ops:['África','Europa','Américas','Ásia'],c:2,exp:'O gavião-real (harpia) é a maior águia das Américas, com garras do tamanho de garras de urso.'},
+     {q:'A Coruja-buraqueira é ativa principalmente quando?',img:AVES[9].img,cap:'Coruja-buraqueira',ops:['Somente à noite','Durante o dia','Apenas ao amanhecer','Apenas ao entardecer'],c:1,exp:'Diferente de outras corujas, a coruja-buraqueira é ativa durante o dia, especialmente ao amanhecer e entardecer.'},
+     {q:'O que significa espécie CR (Criticamente Ameaçada)?',img:AVES[12].img,cap:'Soldadinho-do-araripe CR',ops:['Comum e estável','Pouco comum','Risco moderado de extinção','Extremamente próxima da extinção'],c:3,exp:'CR significa que a espécie enfrenta risco extremamente alto de extinção na natureza — é a categoria mais grave antes da extinção.'},
+     {q:'Quantos indivíduos restam do Soldadinho-do-araripe?',img:AVES[12].img,cap:'CR — área de menos de 28km²',ops:['Menos de 800','Cerca de 5.000','Cerca de 20.000','Mais de 50.000'],c:0,exp:'Menos de 800 indivíduos, restritos a apenas 28 km² na Chapada do Araripe — uma das aves mais ameaçadas do planeta.'},
+     {q:'Qual ave indica rios de altíssima qualidade?',img:AVES[15].img,cap:'Pato-mergulhão CR',ops:['Garça-branca','Flamingo','Pato-mergulhão','Rolinha-roxa'],c:2,exp:'O pato-mergulhão só vive em rios de águas cristalinas com corredeiras. Sua presença indica ecossistema aquático pristino.'},
+   ]},
+  {id:'brejo',n:'Brejo dos Beija-flores',lv:'lv-f',lvn:'Fácil',km:'2,1',t:'1h',sp:19,
+   foto:AVES[2].img,cap:'Área úmida com flores nativas',
+   desc:'Área úmida com grande concentração de beija-flores, garças e flamingos. Trilha curta e plana, perfeita para crianças.',
+   fatos:['🌅 Melhor ao amanhecer','🌺 Flores: 30+ sp.','💧 Brejo permanente','♿ Parcialmente acessível'],
+   aves:[2,3,6,17],
+   quiz:[
+     {q:'Por que o flamingo tem plumagem rosada?',img:AVES[6].img,cap:'Flamingo',ops:['Genética pura','Pigmentos dos crustáceos que come','Exposição ao sol','Seleção natural pela cor'],c:1,exp:'A cor rosada vem dos carotenóides presentes nos crustáceos e algas que o flamingo filtra. Flamingos em cativeiro sem essa dieta ficam brancos.'},
+     {q:'Qual é o canto mais famoso do Brasil, eternizado em poema?',img:AVES[8].img,cap:'Sabiá-laranjeira',ops:['Tucano-toco','Arara-azul','Sabiá-laranjeira','Coruja-buraqueira'],c:2,exp:'O canto do sabiá-laranjeira foi eternizado por Gonçalves Dias na "Canção do Exílio" (1843) — símbolo da saudade do Brasil.'},
+     {q:'O que é "ciência cidadã" na observação de aves?',img:AVES[2].img,cap:'Birdwatching e ciência',ops:['Só cientistas podem registrar','Qualquer pessoa pode contribuir com dados científicos','É proibido sem licença','Só vale com câmera profissional'],c:1,exp:'Ciência cidadã permite que qualquer observador registre avistamentos que alimentam bancos de dados científicos como o WikiAves e o eBird.'},
+     {q:'Por que áreas úmidas são tão importantes?',img:AVES[3].img,cap:'Área úmida',ops:['Só pela beleza','Filtram água, regulam cheias, hospedam 40% das espécies','Facilitam estradas','São fáceis de visitar'],c:1,exp:'Filtram poluentes, amortecem enchentes, estocam carbono e hospedam ~40% de todas as espécies do planeta.'},
+     {q:'Melhor hora para observar aves?',img:AVES[2].img,cap:'Amanhecer',ops:['Meio-dia','À noite','Amanhecer (5h–9h)','Tarde'],c:2,exp:'O amanhecer tem 3× mais aves ativas. O "dawn chorus" é quando a diversidade sonora é máxima.'},
+   ]},
+];
+
+
