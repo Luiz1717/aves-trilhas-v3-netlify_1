@@ -3,7 +3,7 @@
 > Plataforma de ecoturismo acessível e inclusiva — VALORA IFRJ.
 > Com suporte a surdos, vibração háptica, detector de cantos ao vivo e IA.
 
-🔗 **Demo ao vivo:** [https://valoraifrj.netlify.app/](https://valoraifrj.netlify.app/)
+🔗 **Demo ao vivo:** [https://valoraifrjaves.netlify.app/](https://valoraifrjaves.netlify.app/)
 
 ---
 
