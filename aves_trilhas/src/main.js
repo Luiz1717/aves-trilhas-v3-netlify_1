@@ -36,4 +36,3 @@ if(supVib()){
     navigator.vibrate([60,40,60]); // pulso de boas-vindas
   },2500);
 }
-</script>
