@@ -34,29 +34,6 @@ function getACtx() {
 }
 
 /* Perfis acústicos das 5 aves brasileiras */
-const PERFIS_SOM = {
-  'arara-azul':       {notas:[{f:210,d:280,p:130},{f:185,d:320,p:145},{f:165,d:500,p:280},{f:200,d:260,p:110},{f:175,d:300,p:0}],tipo:'sawtooth',vib:{r:5,dep:18},rep:2},
-  'tucano-toco':      {notas:[{f:380,d:80,p:60},{f:420,d:60,p:60},{f:350,d:120,p:200}],tipo:'sawtooth',vib:{r:4,dep:10},rep:3},
-  'beija-flor':       {notas:[{f:3100,d:36,p:24},{f:3500,d:40,p:27},{f:2900,d:36,p:22},{f:3700,d:44,p:29},{f:3000,d:36,p:0}],tipo:'sine',vib:{r:12,dep:40},rep:3},
-  'garca-branca':     {notas:[{f:280,d:150,p:100},{f:260,d:200,p:150},{f:240,d:300,p:0}],tipo:'triangle',vib:{r:3,dep:6},rep:2},
-  'gaviao-real':      {notas:[{f:1200,d:25,p:0},{f:1050,d:45,p:0},{f:875,d:285,p:182},{f:690,d:62,p:0}],tipo:'sawtooth',vib:{r:3,dep:8},rep:3},
-  'ema':              {notas:[{f:80,d:180,p:80},{f:75,d:220,p:100},{f:70,d:400,p:0}],tipo:'sine',vib:{r:3,dep:5},rep:2},
-  'flamingo':         {notas:[{f:320,d:70,p:50},{f:300,d:70,p:50},{f:315,d:70,p:50},{f:295,d:70,p:50}],tipo:'triangle',vib:{r:4,dep:10},rep:3},
-  'ararajuba':        {notas:[{f:800,d:60,p:40},{f:850,d:50,p:40},{f:780,d:80,p:40},{f:820,d:60,p:0}],tipo:'sawtooth',vib:{r:6,dep:20},rep:2},
-  'sabia-laranjeira': {notas:[{f:800,d:60,p:30},{f:950,d:60,p:30},{f:900,d:60,p:30},{f:1100,d:60,p:30},{f:1000,d:60,p:0}],tipo:'sine',vib:{r:6,dep:20},rep:3},
-  'coruja-buraqueira':{notas:[{f:340,d:120,p:80},{f:320,d:140,p:100}],tipo:'triangle',vib:{r:4,dep:10},rep:4},
-  'pica-pau':         {notas:[{f:400,d:20,p:18},{f:400,d:20,p:18},{f:400,d:20,p:18},{f:400,d:20,p:18},{f:400,d:20,p:18},{f:400,d:20,p:18},{f:400,d:20,p:18},{f:400,d:20,p:0}],tipo:'square',vib:{r:0,dep:0},rep:3},
-  'papagaio-real':    {notas:[{f:700,d:80,p:50},{f:750,d:70,p:50},{f:680,d:100,p:40},{f:720,d:80,p:0}],tipo:'sawtooth',vib:{r:5,dep:15},rep:2},
-  'soldadinho':       {notas:[{f:1400,d:50,p:30},{f:1650,d:50,p:30},{f:1300,d:50,p:30},{f:1800,d:50,p:30},{f:1500,d:50,p:0}],tipo:'sine',vib:{r:8,dep:25},rep:2},
-  'mutum':            {notas:[{f:90,d:200,p:100},{f:85,d:250,p:120},{f:80,d:500,p:0}],tipo:'sine',vib:{r:3,dep:5},rep:2},
-  'socoo':            {notas:[{f:160,d:180,p:80},{f:150,d:220,p:100},{f:140,d:400,p:0}],tipo:'triangle',vib:{r:4,dep:8},rep:2},
-  'pato-mergulhao':   {notas:[{f:460,d:70,p:50},{f:440,d:80,p:50},{f:420,d:100,p:0}],tipo:'sawtooth',vib:{r:5,dep:12},rep:2},
-  'ararajuba-verde':  {notas:[{f:750,d:70,p:40},{f:800,d:60,p:40},{f:720,d:90,p:40},{f:780,d:70,p:0}],tipo:'sawtooth',vib:{r:5,dep:15},rep:2},
-  'rolinha-roxa':     {notas:[{f:320,d:90,p:68},{f:305,d:96,p:73},{f:290,d:50,p:0},{f:280,d:50,p:0},{f:270,d:50,p:0}],tipo:'triangle',vib:{r:4,dep:12},rep:2},
-  'tangara':          {notas:[{f:1400,d:55,p:32},{f:1650,d:55,p:32},{f:1300,d:55,p:32},{f:1800,d:55,p:32},{f:1500,d:55,p:0}],tipo:'sine',vib:{r:8,dep:26},rep:2},
-  'pomba-galega':     {notas:[{f:315,d:90,p:68},{f:295,d:96,p:73},{f:275,d:205,p:108},{f:305,d:88,p:66},{f:285,d:93,p:0}],tipo:'triangle',vib:{r:4,dep:12},rep:2},
-  'gaviao-pombo':     {notas:[{f:1050,d:72,p:36},{f:875,d:285,p:182},{f:690,d:62,p:31},{f:825,d:265,p:0}],tipo:'sawtooth',vib:{r:3,dep:8},rep:1},
-};
 
 
 function durPerfil(id) {

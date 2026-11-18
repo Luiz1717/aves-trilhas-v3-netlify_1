@@ -65,12 +65,3 @@ function moverFocoModal() {
     if (el) el.focus();
   });
 }
-
-</script>
-<script>new window.VLibras.Widget('https://vlibras.gov.br/app');</script>
-<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-
-<script>
-/* ════════════════════════════════════════
-   DADOS DAS 5 AVES (fotos base64 reais)
-════════════════════════════════════════ */
